@@ -1,22 +1,16 @@
-import { useState } from "react";
+import React from "react";
 
 import "./App.css";
+import MainWindow from "./components/MainWindow/MainWindow";
+import UserListList from "./components/userListList/userListList";
+import ErrorModal from "./components/ErrorModal/ErrorModal";
 
 function App() {
 	return (
 		<>
-			<div className="main-window">
-				<label htmlFor="username">Username</label>
-				<input type="text" id="username" />
-
-				<label htmlFor="age">Age (Years)</label>
-				<input type="number" id="age" />
-
-				<button className="addUserBtn">Add user</button>
-			</div>
-			<div className="userList">
-				<div className="userListItem">Max (31 years old)</div>
-			</div>
+			<MainWindow />
+			<UserListList />
+			<ErrorModal />
 		</>
 	);
 }

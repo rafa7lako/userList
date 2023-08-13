@@ -1,0 +1,21 @@
+.error-modal{
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: white;
+    width: 40em;
+    padding: 2em;
+    border-radius: 25px;
+    color: #333;
+    display:none;
+  }
+  
+  .invalid-input-row {
+    
+    background-color: purple;
+    color: white;
+  }
+
+  .hidden{
+    display: none;
+  }
