@@ -10,14 +10,20 @@ const userArray = [];
 function App() {
 	
 	const [userListArray, setUserListArray] = useState(userArray);
+	const [ifOutputModal, setIfOutputModal] = useState(false)
 
+	
 	
 
 	const submitedData = (inputData) =>{
-
-		setUserListArray((prevData) => {
+		if(inputData.username != '' && inputData.age != ''){
+			setUserListArray((prevData) => {
 			return [inputData, ...prevData];
 		});
+		} else {
+			 setIfOutputModal(true)
+		}
+		
 
 	};
 
@@ -31,7 +37,7 @@ function App() {
 			{userListArray.length < 1 && <p>There are no users added.</p>}
 			{userListArray.length > 0 && <UserListList dataArray={userListArray}/>}
 
-			<ErrorModal />
+			{ifOutputModal && <ErrorModal />}
 		</>
 	);
 }

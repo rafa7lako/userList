@@ -1,21 +1,32 @@
-.error-modal{
-    top: 50%;left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    background-color: white;
-    width: 40em;
-    padding: 2em;
-    border-radius: 25px;
-    color: #333;
-    display:none;
-  }
-  
-  .invalid-input-row {
-    
-    background-color: purple;
-    color: white;
-  }
+.error-modal {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	background-color: white;
+	width: 40em;
+	padding: 2em;
+	border-radius: 25px;
+	color: #333;
+  z-index: 1;
+	/* display:none; */
+}
 
-  .hidden{
+.invalid-input-row {
+	background-color: purple;
+	color: white;
+}
+
+.shadow {
+  top: 0;
+  left: 0;
+  position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(0, 0, 0, 0.8);
+  
+}
+
+.hidden{
     display: none;
   }
