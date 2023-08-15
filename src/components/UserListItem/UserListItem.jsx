@@ -2,10 +2,10 @@ import React from "react";
 
 import styles from "./UserListItem.module.css";
 
-const UserListItem = () => {
+const UserListItem = (props) => {
 	return (
 		<>
-			<li className={styles.userListItem}>Max (31 years old)</li>
+			<li className={styles.userListItem}>{props.username} {props.age}</li>
 		</>
 	);
 };
