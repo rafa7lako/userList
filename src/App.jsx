@@ -31,13 +31,13 @@ function App() {
 	};
 
 	return (
-		<>
+		<React.Fragment>
 			<MainWindow onSubmitedData={submitedData} />
 			{userListArray.length < 1 && <p>There are no users added.</p>}
 			{userListArray.length > 0 && <UserListList dataArray={userListArray} />}
 
 			{ifOutputModal ? <ErrorModal isBtnClicked={isBtnClicked} /> : ""}
-		</>
+		</React.Fragment>
 	);
 }
 
